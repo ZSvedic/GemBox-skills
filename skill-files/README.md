@@ -1,45 +1,28 @@
-## Skill for CLI coding agents (Copilot / Claude Code / Codex)
+## Skill for CLI coding agents (Copilot/Claude/Codex)
 
-This package ships a ready-to-install [Agent Skill](https://agentskills.io) named "gembox-skill". Instructions for popular coding agents are below.
+This package contains a ready-to-install [Agent Skill](https://agentskills.io) named "gembox-skill" that provides coding assistance for [GemBox components](https://www.gemboxsoftware.com/).
 
-**A. GitHub Copilot**
-1. Copy the entire `gembox-skill/` folder to: 
+To install, copy the entire `gembox-skill/` folder to your agent skills install path (see the list below). Restart your coding agent and then type `/gembox-skill` in the interactive mode to verify the skill is available.
 
-   `~/.copilot/skills/` (personal skills)
+Once installed, your coding agent will use "gembox-skill" automatically when generating GemBox code. You can invoke skill manually with `/gembox-skill`.
 
-   OR 
 
-   `[project-root]/.github/skills/` (project skills)
+### Coding agents paths 
 
-2. Check that "gembox-skill" is enabled with: 
-   
-   `copilot -i "/skills list"`
+* A. GitHub Copilot
+  * Personal skills install path
+    * Windows: `%USERPROFILE%\.copilot\skills\`
+    * Linux/macOS: `~/.copilot/skills/` 
+  * Repository skills install path: [Read more in GitHub docs](https://docs.github.com/en/copilot/concepts/agents/about-agent-skills#about-agent-skills)
 
-**B. Claude Code**
-1. Copy the entire `gembox-skill/` folder to: 
+* B. Claude Code
+  * Personal skills install path
+    * Windows: `%USERPROFILE%\.claude\skills\`
+    * Linux/macOS: `~/.claude/skills/` 
+  * Enterprise/Project/Plugin skills install path: [Read more in Claude docs](https://code.claude.com/docs/en/skills#where-skills-live)
 
-   `~/.claude/skills/` (personal skills)
-
-   OR
-
-   `[project-root]/.claude/skills/` (project skills)
-
-2. Check that "gembox-skill" is enabled with: 
-
-   `claude /skills`
-
-**C. Codex**
-
-1. Copy the entire `gembox-skill/` folder to: 
-
-   `~/.codex/skills/` (personal skills)
-
-   OR
-
-   `[project-root]/.codex/skills/` (project skills)
-
-2. Until Codex adds a CLI option to check skills, use this to check that "gembox-skill" is enabled:
-
-   `codex e "Display the version of gembox-skill?" --skip-git-repo-check`
-
-Once you have "gembox-skill" installed, your coding agent will use that skill to search GemBox documentation and examples when generating GemBox code.
+* C. OpenAI Codex
+  * Personal skills install path
+    * Windows: `%USERPROFILE%\.codex\skills\`
+    * Linux/macOS: `~/.codex/skills/`
+  * Repository/Admin skills install path: [Read more in OpenAI docs](https://developers.openai.com/codex/skills)
