@@ -2,9 +2,9 @@
 
 This package contains a ready-to-install [Agent Skill](https://agentskills.io) named "gembox-skill" that provides coding assistance for [GemBox components](https://www.gemboxsoftware.com/).
 
-To install, copy the entire `gembox-skill/` folder to your agent skills install path (see the list below). Restart your coding agent and then type `/gembox-skill` in the interactive mode to verify the skill is available.
+To install, copy the entire `gembox-skill/` folder to your agent skills install path (see the list below). Restart your coding agent and then type `/skills list` in the interactive mode to verify the skill is available.
 
-Once installed, your coding agent will use "gembox-skill" automatically when generating GemBox code. You can invoke skill manually with `/gembox-skill`.
+Once installed, your coding agent will use "gembox-skill" automatically when generating GemBox code. You can invoke skill manually with `/gembox-skill` (Copilot and Claude) and `/skills gembox-skill` (Codex).
 
 
 ### Coding agents paths 

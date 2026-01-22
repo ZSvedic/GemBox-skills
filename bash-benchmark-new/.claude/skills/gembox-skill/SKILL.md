@@ -1,22 +1,22 @@
 ---
 name: gembox-skill
-description: Coding assistance for GemBox components. Use when users ask about any GemBox component or coding task that can be performed with a GemBox component. This includes GemBox.Spreadsheet (.NET read/write Excel files), GemBox.Document (.NET read/write Word files), GemBox.Pdf (.NET read/write PDF files), GemBox.Presentation (.NET read/write PowerPoint files), GemBox.Email (.NET read/write email files, send/receive emails), GemBox.Imaging (.NET read/write image files), and GemBox.PdfViewer (JavaScript display/print/save PDF files).
+description: Coding assistance for [GemBox components](https://www.gemboxsoftware.com/). Use when users ask about any GemBox component or coding task that can be performed with a GemBox component. This includes GemBox.Spreadsheet (.NET read/write Excel files), GemBox.Document (.NET read/write Word files), GemBox.Pdf (.NET read/write PDF files), GemBox.Presentation (.NET read/write PowerPoint files), GemBox.Email (.NET read/write email files, send/receive emails), GemBox.Imaging (.NET read/write image files), and GemBox.PdfViewer (JavaScript display/print/save PDF files).
 license: MIT
 metadata:
   author: gemboxsoftware.com
-  version: "0.8"
+  version: "0.9"
 ---
 
 # CLI tips
 - .NET runtime check: `dotnet --list-runtimes`
-- GemBox .NET component versions: `dotnet list package`
-- If you need GemBox API details, look them up locally in the XML docs. E.g. GemBox.Spreadsheet NuGet paths:
-  - POSIX: `~/.nuget/packages/gembox.spreadsheet/2025.12.105/lib/*/GemBox.Spreadsheet.xml`
+- GemBox .NET component version: `dotnet list package`
+- If you need GemBox API details, look them up locally in the XML docs. Example GemBox.Spreadsheet NuGet paths:
+  - Linux/macOS: `~/.nuget/packages/gembox.spreadsheet/2025.12.105/lib/*/GemBox.Spreadsheet.xml`
   - PowerShell: `$env:USERPROFILE\.nuget\packages\gembox.spreadsheet\2025.12.105\lib\*\GemBox.Spreadsheet.xml`
 - Use ripgrep to search the XML. E.g.:
-  - POSIX: `rg -n "Autofit" ~/.nuget/packages/gembox.spreadsheet/2025.12.105/lib/**/GemBox.Spreadsheet.xml`
+  - Linux/macOS: `rg -n "Autofit" ~/.nuget/packages/gembox.spreadsheet/2025.12.105/lib/**/GemBox.Spreadsheet.xml`
 - If the API is unclear, scan namespaces and remarks/examples in the doc XML before coding. E.g.:
-  - POSIX: `rg -n "namespace GemBox|Drawing|PivotTables" ~/.nuget/packages/gembox.spreadsheet/2025.12.105/lib/**/GemBox.Spreadsheet.xml`
+  - Linux/macOS: `rg -n "namespace GemBox|Drawing|PivotTables" ~/.nuget/packages/gembox.spreadsheet/2025.12.105/lib/**/GemBox.Spreadsheet.xml`
 
 # Online search
 If you don't find relevant docs via CLI, and you have network access, search online:
