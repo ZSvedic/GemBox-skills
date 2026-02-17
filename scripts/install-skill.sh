@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-SKILL_SRC="gembox-skill"
+SKILL_SRC="$(pwd)/gembox-skill"
 
 echo "=== Installing GemBox skills..."
 

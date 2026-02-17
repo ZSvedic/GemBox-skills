@@ -1,9 +1,8 @@
-// For format details, see https://aka.ms/devcontainer.json. For config options, see the
-// README at: https://github.com/devcontainers/templates/tree/main/src/dotnet
+// For format details, see https://aka.ms/devcontainer.json.
 {
 	"name": "GemBox AI Agents",
 
-	// Or use a Dockerfile or Docker Compose file. More info: https://containers.dev/guide/dockerfile
+	// README at: https://github.com/devcontainers/templates/tree/main/src/dotnet
 	"image": "mcr.microsoft.com/devcontainers/dotnet:1-10.0-preview-noble",
 
 	// Features to add to the dev container. More info: https://containers.dev/features.
@@ -13,23 +12,16 @@
 		"ghcr.io/stu-bell/devcontainer-features/claude-code:0": {}
 	},
 
-	// Use 'postCreateCommand' to run commands after the container is created.
+	// Use 'postCreateCommand' to install codex and GemBox skill.
 	"postCreateCommand": "npm install -g @openai/codex && ./scripts/install-skill.sh",
 
-	// Display all versions.
-	"postStartCommand": "./scripts/check-versions.sh"
+	// Display all versions when starting.
+	"postStartCommand": "./scripts/check-versions.sh",
 
-	// Use 'forwardPorts' to make a list of ports inside the container available locally.
-	// "forwardPorts": [5000, 5001],
-	// "portsAttributes": {
-	//		"5001": {
-	//			"protocol": "https"
-	//		}
-	// }
+	// Mount the workspace folder to /workspaces/<folder-name> in the container.
+	"workspaceMount": "source=${localWorkspaceFolder},target=/workspaces/${localWorkspaceFolderBasename},type=bind",
+	"workspaceFolder": "/workspaces/${localWorkspaceFolderBasename}",
 
-	// Configure tool-specific properties.
-	// "customizations": {},
-
-	// Uncomment to connect as root instead. More info: https://aka.ms/dev-containers-non-root.
-	// "remoteUser": "root"
+	// More info: https://aka.ms/dev-containers-non-root.
+	"remoteUser": "root"
 }
