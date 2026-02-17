@@ -6,7 +6,6 @@ To install, copy the entire `gembox-skill/` folder to your agent skills install 
 
 Once installed, your coding agent will use "gembox-skill" automatically when generating GemBox code. You can invoke skill manually with `/gembox-skill` (Copilot and Claude) and `/skills gembox-skill` (Codex).
 
-
 ### Coding agents paths 
 
 * A. GitHub Copilot
@@ -26,3 +25,7 @@ Once installed, your coding agent will use "gembox-skill" automatically when gen
     * Windows: `%USERPROFILE%\.codex\skills\`
     * Linux/macOS: `~/.codex/skills/`
   * Repository/Admin skills install path: [Read more in OpenAI docs](https://developers.openai.com/codex/skills)
+
+## Skill testing
+
+To test the skill when modifying, there is a [dev container environment](https://aka.ms/devcontainer.json) with .NET 10.0, git, bash, powershell, Node, Copilot, Claude, Codex, and GemBox skill installed. When started, it mounts your local folder to the container. After you login to Copilot/Claude/Codex you can test how skill works or run [test-bash-benchmark](/test-bash-benchmark/). 

@@ -1,1 +1,0 @@
-docker run -it --name gembox-skill-container win10-gembox-skill-all:latest
