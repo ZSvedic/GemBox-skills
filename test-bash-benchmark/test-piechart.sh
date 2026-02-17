@@ -1,8 +1,8 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 N_RUNS="${1:-1}"
 
-PROMPT="Generate C# code, together with project files for opening in VSCode, that uses GemBox.Spreadsheet 2025.12.105 and .NET 10 (both installed on this machine). 
+PROMPT="Generate C# code, together with project files for opening in VSCode, that uses GemBox.Spreadsheet 2026.2.100 and .NET 10. 
 That C# code should:
 - Create a sheet 'Breakdown' with columns 'Continents' and 'Area (km2)'.
 - Bold header, autofit columns, use thousands separators.

@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 # Benchmark Script — agentic runs + shim executor + random nonce
 
 PROMPT="$1"
@@ -63,16 +63,16 @@ run_agent() {
 
     case $agent in
       codex-cli)
-        cmd=(/opt/homebrew/bin/codex exec \
+        cmd=(codex exec \
           --dangerously-bypass-approvals-and-sandbox \
           --skip-git-repo-check \
           "$prompt")
         ;;
       copilot-cli)
-        cmd=(/opt/homebrew/bin/copilot --allow-all-tools -p "$prompt")
+        cmd=(copilot --allow-all-tools -p "$prompt")
         ;;
       claude-code)
-        cmd=(/opt/homebrew/bin/claude -p --verbose -debug --output-format json --permission-mode bypassPermissions "$prompt")
+        cmd=(claude -p --verbose -debug --output-format json --permission-mode bypassPermissions "$prompt")
         ;;
     esac
 
