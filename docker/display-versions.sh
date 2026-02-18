@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+dotnet --version
+git --version
+node --version
+npm --version
+codex --version
+copilot --version
+claude --version
+pwsh --version
